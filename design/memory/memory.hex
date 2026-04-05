@@ -1,0 +1,24 @@
+//execute seperately 
+//prg-2
+620A    // LOAD R1, [0A]  -> R1 = 5
+640B    // LOAD R2, [0B]  -> R2 = 3
+1650    // ADD R3, R1, R2 -> R3 = 5 + 3 = 8
+80C0    // OUT R3         -> Press 1  extra
+3850    // MUL R4, R1, R2 -> R4 = 5 * 3 = 15 
+8100    // OUT R4         -> Press 2  extra
+7815    // STORE R4, [15] -> Mem[15] = 0F
+F000    // HALT           -> Stop
+
+
+//prg - 1
+620A    // LOAD R1, 10    -> R1 = 5
+640B    // LOAD R2, 11    -> R2 = 3
+1650    // ADD R3, R1, R2 -> R3 = 5 + 3 = 8
+80C0    // OUT R3         -> Press 1
+2850    // SUB R4, R1, R2 -> R4 = 5 - 3 = 2
+8100    // OUT R4         -> Press 2
+3AD0    // MUL R5, R3, R2 -> R5 = 8 * 3 = 24
+8140    // OUT R5         -> Press 3
+7A14    // STORE R5, 20   
+40E0    // CMP R0, R3, R4 
+F000    // HALT           -> Stops the processor
