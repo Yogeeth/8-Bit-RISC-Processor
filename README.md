@@ -93,6 +93,10 @@ F000    // HALT           -> Stops the processor
 ```
 
 
+https://github.com/user-attachments/assets/e8c67384-12d5-444c-a7ca-a0b8e2456d24
+
+
+
 **Program - 2**
 ```
 620A    // LOAD R1, [0A]  -> R1 = 5
@@ -104,4 +108,8 @@ F000    // HALT           -> Stops the processor
 7815    // STORE R4, [15] -> Mem[15] = 0F
 F000    // HALT           -> Stop
 ```
+
+
+https://github.com/user-attachments/assets/12004d8d-f94d-4178-b47a-702320524c69
+
 
