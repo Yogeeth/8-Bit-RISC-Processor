@@ -29,6 +29,7 @@ To optimize decoding, the 16-bit instruction word uses three specific layouts ba
 ---
 # Section 2: Top-Level Integration & Peripherals
 ## 2.1 Top-Level Architecture (`top.sv`)
+![alt text](top.png)
 The `top.sv` wrapper isolates the platform-independent CPU core (`0processor.sv`) from the physical FPGA hardware. It manages clock routing, debouncing, and display multiplexing.
 
 |**Port Name**|**Dir.**|**Width**|**Function**|**Physical Hardware**|
@@ -42,6 +43,7 @@ The `top.sv` wrapper isolates the platform-independent CPU core (`0processor.sv`
 - **Display Driver (`display_controller.sv` & `decoder.sv`):** Uses a high-frequency refresh counter to multiplex the anodes, splitting the CPU's 8-bit output into two Hexadecimal digits (0-F) displayed simultaneously on the 7-segment hardware.
 ---
 # Section 3: The CPU Core (`0processor.sv`)
+![alt text](processor.png)
 ## 3.1 Datapath Integration
 The `0processor.sv` module acts as the CPU motherboard, structurally wiring the processor's sub-modules:
 - **Memory & Fetch:** `1pc.sv`, `2instr_mem.sv`, `3instr_reg.sv`
