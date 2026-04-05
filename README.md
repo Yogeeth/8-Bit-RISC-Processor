@@ -85,7 +85,7 @@ Every instruction lifecycle is governed by a 5-stage FSM:
 80C0    // OUT R3         -> Press 1
 2850    // SUB R4, R1, R2 -> R4 = 5 - 3 = 2
 8100    // OUT R4         -> Press 2
-3AD0    // MUL R5, R3, R2 -> R5 = 8 * 3 = 24
+3AD0    // MUL R5, R3, R2 -> R5 = 8 * 3 = 24 (18 in HEX)
 8140    // OUT R5         -> Press 3
 7A14    // STORE R5, 20   
 40E0    // CMP R0, R3, R4 
@@ -102,9 +102,9 @@ https://github.com/user-attachments/assets/e8c67384-12d5-444c-a7ca-a0b8e2456d24
 620A    // LOAD R1, [0A]  -> R1 = 5
 640B    // LOAD R2, [0B]  -> R2 = 3
 1650    // ADD R3, R1, R2 -> R3 = 5 + 3 = 8
-80C0    // OUT R3         -> [Press 1]: Verify Addition
+80C0    // OUT R3         -> Press 1
 3850    // MUL R4, R1, R2 -> R4 = 5 * 3 = 15 (0F in Hex)
-8100    // OUT R4         -> [Press 2]: Verify Multiplication
+8100    // OUT R4         -> Press 2
 7815    // STORE R4, [15] -> Mem[15] = 0F
 F000    // HALT           -> Stop
 ```
